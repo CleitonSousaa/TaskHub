@@ -21,6 +21,39 @@
       "cost": 0,
       "services": [],
       "id": 2
+    },
+    {
+      "name": "Python",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": ""
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Python",
+      "budget": "5620",
+      "category": {
+        "id": "1",
+        "name": ""
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "francisco",
+      "budget": "4500",
+      "category": {
+        "id": "4",
+        "name": ""
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [
