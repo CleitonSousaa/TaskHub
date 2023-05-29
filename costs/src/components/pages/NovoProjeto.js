@@ -25,7 +25,7 @@ function NovoProjeto(){
         })
         .then((resp) => resp.json())
         .then((data) => {
-            console.log(data)
+            
             //redirect
             history('/Projetos', { state: { message: 'Projeto criado com sucesso' } });
         })

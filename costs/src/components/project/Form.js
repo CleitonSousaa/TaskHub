@@ -38,13 +38,13 @@ function Form({handleSubmit, btnText, projectData}){
 
     function handleCategory(e) {
         const selectedCategoryId = e.target.value;
-        const selectedCategory = categories.find(category => category.id === selectedCategoryId);
+        const selectedCategory = e.target.options[e.target.selectedIndex].text;
       
         setProject({
           ...project,
           category: {
             id: selectedCategoryId,
-            name: selectedCategory ? selectedCategory.name : ''
+            name: `${selectedCategory }`
           }
         });
       }

@@ -31,7 +31,7 @@ function Projetos(){
             },
         }).then(resp => resp.json())
         .then(data => {
-            console.log(data)
+            
             setProjetos(data)
         })
         .catch(err => console.log(err))

@@ -1,19 +1,19 @@
 {
   "projects": [
     {
-      "name": "Python",
+      "name": "francisco",
       "budget": "2000",
       "category": {
-        "id": "1",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
       "id": 1
     },
     {
-      "name": "amor",
-      "budget": "6235",
+      "name": "Python",
+      "budget": "6300",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
@@ -23,15 +23,26 @@
       "id": 2
     },
     {
-      "name": "nucleo",
-      "budget": "4500",
+      "name": "eduarda",
+      "budget": "980",
       "category": {
-        "id": "4",
-        "name": "infra"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "hb services",
+      "budget": "3000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
