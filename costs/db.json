@@ -1,6 +1,16 @@
 {
   "projects": [
-    
+    {
+      "name": "Python",
+      "budget": "200",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    }
   ],
   "categories": [
     {
