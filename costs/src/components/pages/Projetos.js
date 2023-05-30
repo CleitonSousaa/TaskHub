@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 import Message from "../layout/message"
 import Conteiner from "../layout/Container"
+import Loading from '../layout/Loading'
 import LinkBottun from '../layout/LinkButton'
 
 import styles from './Projetos.module.css'
@@ -13,6 +14,7 @@ import ProjetosCard from '../project/ProjetosCard'
 function Projetos(){
 
     const [Projetos, setProjetos] = useState([])
+    const [removeLoading, setRemoveLoading] = useState(false)
 
 
     const location = useLocation()
@@ -23,7 +25,7 @@ function Projetos(){
 
 
     useEffect(() => {
-
+        setTimeout(() =>{
         fetch('http://localhost:5001/projects', {
             method: 'GET',
             headers: {
@@ -33,8 +35,10 @@ function Projetos(){
         .then(data => {
             
             setProjetos(data)
+            setRemoveLoading(true)
         })
         .catch(err => console.log(err))
+    }, 500)
     }, [])
 
     return (
@@ -55,6 +59,10 @@ function Projetos(){
 
                                      />
                 ))}
+                {!removeLoading && <Loading/>}
+                {removeLoading && Projetos.length === 0 &&(
+                    <p>não há projetos cadastrados!</p>
+                 )}
                 
             </Conteiner>
         </div>
