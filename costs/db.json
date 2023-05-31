@@ -1,14 +1,27 @@
 {
   "projects": [
     {
-      "name": "jav",
-      "budget": "2001",
+      "name": "java",
+      "budget": "3200",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 250,
+      "services": [
+        {
+          "name": "Python",
+          "descrição": "faz",
+          "cost": "100",
+          "id": "da482e2d-5f08-4098-81b2-3efa5341054a"
+        },
+        {
+          "name": "Python",
+          "descrição": "faz",
+          "cost": "150",
+          "id": "b64da831-a2cf-415e-987e-bd66cb13e726"
+        }
+      ],
       "id": 1
     }
   ],
