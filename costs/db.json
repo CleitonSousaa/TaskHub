@@ -7,19 +7,25 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 250,
+      "cost": 1667,
       "services": [
         {
           "name": "Python",
-          "descrição": "faz",
-          "cost": "100",
-          "id": "da482e2d-5f08-4098-81b2-3efa5341054a"
+          "cost": "45",
+          "descrição": "fvdfv",
+          "id": "d07fc8aa-449f-43db-bd6a-d8be62611db9"
         },
         {
           "name": "Python",
+          "cost": "1560",
           "descrição": "faz",
-          "cost": "150",
-          "id": "b64da831-a2cf-415e-987e-bd66cb13e726"
+          "id": "ed5f808c-026c-4955-9519-84cc289cdb92"
+        },
+        {
+          "name": "Python",
+          "cost": "62",
+          "descrição": "cobrar",
+          "id": "3799fa5c-6e5a-45f1-aa1e-6853b54f1ddc"
         }
       ],
       "id": 1

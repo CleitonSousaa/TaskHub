@@ -1,4 +1,4 @@
-import { parse, v4 as uuidv4 } from 'uuid'
+import {  v4 as uuidv4 } from 'uuid'
 
 
 
@@ -12,6 +12,7 @@ import Conteiner from '../layout/Container'
 import Form from '../project/Form'
 import Message from '../layout/message'
 import ServiceForm from '../services/ServiceForm'
+import ServiceCard from '../services/ServiceCard'
 
 
 
@@ -20,6 +21,7 @@ function Projeto(){
     const { id} = useParams()
 
     const[Project, setProject] = useState([])
+    const[services, setServices] = useState([])
     const [showProjectForm, setProjectForm] = useState(false)
     const [showServiceForm, setServiceForm] = useState(false)
     const[message, setMessage] = useState()
@@ -35,6 +37,7 @@ function Projeto(){
         }).then(res => res.json())
         .then((data) => {
             setProject(data)
+            setServices(data.services)
         }).catch(err => console.log(err))
         }, 300)
     }, [id])
@@ -96,6 +99,32 @@ function Projeto(){
 
         }).catch(err => console.log(err))
     }
+
+    function removeService(id, cost){
+        const servicesUpdate = Project.services.filter(
+            (service) => service.id !== id
+        )
+        const projectUpdated = Project
+
+        projectUpdated.services = servicesUpdate
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+        fetch(`http://localhost:5001/projects/${projectUpdated.id}`, {
+            method: 'PATCH',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(projectUpdated)
+        }).then(res => res.json())
+        .then((data) => {
+            setProject(projectUpdated)
+            setServices(servicesUpdate)
+            setMessage('Serviço removido com sucesso !')
+
+        }).catch(err => console.log(err))
+
+    }
+
     function toggleProjectForm(){
         setProjectForm(!showProjectForm)
 
@@ -112,6 +141,7 @@ function Projeto(){
         {Project.name ? (
         <div className={styles.project_details}>
             <Conteiner customClass="column">
+            
                 {message && <Message type={type} msg={message} /> }
                 <div className={styles.details_conteiner}>
                     <h1>Projeto : {Project.name}</h1>
@@ -151,8 +181,21 @@ function Projeto(){
                             }
                     </div>
                 </div>
-            </Conteiner>
+                <h2>Serviços</h2>
+                <Conteiner customClass="start" >
+                    {services.length > 0 &&                       
+                        services.map((service) => (
+                            <ServiceCard    id={service.id}
+                                            name={service.name}
+                                            cost={service.cost}
+                                            description={service.descricao}
+                                            key={service.id}
+                                            handleRemove={removeService} />
+                        ))}
 
+                    {services.length === 0 && <p>não ha serviços cadastrados</p>}
+                </Conteiner>
+        </Conteiner>
         </div>
         ): (
             <Loading/>

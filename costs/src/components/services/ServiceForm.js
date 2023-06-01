@@ -8,8 +8,7 @@ import styles from '../project/Form.module.css'
 function ServiceForm({handleSubmit, btnText, projectData}){
     const [service, setService] = useState({})
 
-    function submit(e){
-        e.preventDefault()
+    function submit(e){      
         projectData.services.push(service)
         handleSubmit(projectData)
     }
