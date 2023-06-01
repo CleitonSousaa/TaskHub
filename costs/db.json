@@ -1,36 +1,5 @@
 {
-  "projects": [
-    {
-      "name": "java",
-      "budget": "3200",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 1667,
-      "services": [
-        {
-          "name": "Python",
-          "cost": "45",
-          "descrição": "fvdfv",
-          "id": "d07fc8aa-449f-43db-bd6a-d8be62611db9"
-        },
-        {
-          "name": "Python",
-          "cost": "1560",
-          "descrição": "faz",
-          "id": "ed5f808c-026c-4955-9519-84cc289cdb92"
-        },
-        {
-          "name": "Python",
-          "cost": "62",
-          "descrição": "cobrar",
-          "id": "3799fa5c-6e5a-45f1-aa1e-6853b54f1ddc"
-        }
-      ],
-      "id": 1
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": 1,
