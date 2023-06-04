@@ -2,8 +2,10 @@
     padding: 1em;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    width: 24%;
+    width: 300px;
     margin: 0.5%;
+    height: 200px;
+    
 }
 
 .projetos_card h4{

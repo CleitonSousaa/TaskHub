@@ -9,19 +9,16 @@ function Navbar(){
     return(
         <nav className={styles.navbar}>
             <Conteiner>
-            <Link>
+            <div className={styles.navegacao}>
                 <img src={logo} alt="logo" className={styles.logo} />
-            </Link>
-            <ul className={styles.list}>
-                <li className={styles.item}><Link exact="true" to="/">Inicio</Link></li>
-                <li className={styles.item}><Link exact="true" to="/Empresa">Empresa</Link></li>
-                <li className={styles.item}><Link exact="true" to="/Contato">Contato</Link></li>
-                <li className={styles.item}><Link exact="true" to="/Projetos">Projetos</Link></li>
-                
-                
-                
-                
-            </ul>
+                <ul className={styles.list}>
+                    <li className={styles.item}><Link exact="true" to="/">Inicio</Link></li>
+                    <li className={styles.item}><Link exact="true" to="/Empresa">Empresa</Link></li>
+                    <li className={styles.item}><Link exact="true" to="/Contato">Contato</Link></li>
+                    <li className={styles.item}><Link exact="true" to="/Projetos">Projetos</Link></li> 
+                </ul>
+            </div>
+            
             </Conteiner>
         </nav>
     )

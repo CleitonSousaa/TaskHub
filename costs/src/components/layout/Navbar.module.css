@@ -1,8 +1,15 @@
 .navbar{
+    width: 100%;
+    background-color: #7c7878;
+    
+}
+.navegacao{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     background-color: #222;
-    padding: 1em;
+    height: 10vh;
 }
 
 .list{
