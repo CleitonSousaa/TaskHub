@@ -7,7 +7,13 @@
 
 html,body,#root{
   background-color: #f2eeee;
-  height: 100vh;
+  
   color: black;
   overflow: hidden;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }

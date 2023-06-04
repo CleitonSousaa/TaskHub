@@ -1,22 +1,44 @@
 .conteiner{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    height: 70%;
+    
 }
 .min-heigth{
     
 }
 .start{
-    width: 100%;
-    height: 80%;
-    flex-direction: row;
-    justify-content: center;
     
-    flex-wrap: nowrap;
 }
 .column{
-    flex-direction: column;
+    
+    
+}
+.estart{
+    
+}
+
+
+
+
+.ConteinerProjetos{
+    padding-top: 0px;
+    gap: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Servicos{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:100px;
+}
+.Servicos h2{
+    width: 100%;
+}
+.ConteinerGeral{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 150px;
 }

@@ -7,8 +7,27 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 60,
+      "services": [
+        {
+          "name": "ghngn",
+          "cost": "52",
+          "descrição": "mbnm",
+          "id": "e2a4a3fe-61ed-4442-8266-108157d78ec6"
+        },
+        {
+          "name": "5122",
+          "cost": "2",
+          "descrição": "gfhbf",
+          "id": "52ef529a-b947-4b6a-a92e-718721e3d271"
+        },
+        {
+          "name": "gthg",
+          "cost": "6",
+          "descrição": "fbgb",
+          "id": "2e444193-906c-4bad-aea4-04199465370e"
+        }
+      ],
       "id": 1
     },
     {
@@ -21,24 +40,6 @@
       "cost": 0,
       "services": [],
       "id": 2
-    },
-    {
-      "name": "frvgd",
-      "budget": "541",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 2,
-      "services": [
-        {
-          "name": "ga",
-          "cost": "2",
-          "descrição": "dvfv",
-          "id": "6a679f2c-496c-4547-a06c-7e71ecccca6b"
-        }
-      ],
-      "id": 3
     }
   ],
   "categories": [

@@ -1,15 +1,22 @@
 .footer{
     background-color: #222;
     color: #fff;
-    padding: 3em;
     text-align: center;
-    height: 20vh;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 .social{
     display: flex;
     justify-content: center;
     list-style: none;
+    align-items: center;
 }
 .social li{
     margin: 0 1em;
@@ -22,7 +29,7 @@
     cursor: pointer;
 }
 .copy{
-    margin-top: 2em;
+    margin-top: .5em;
 }
 
 .copy span{

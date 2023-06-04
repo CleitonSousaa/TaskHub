@@ -1,5 +1,8 @@
 .project_conteiner{
-    padding: 2em;
+    padding: 3em;
+    height: 100%;
+    width: 100%;
+    
 }
 .title_conteiner{
     display: flex;

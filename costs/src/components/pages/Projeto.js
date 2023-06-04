@@ -140,49 +140,53 @@ function Projeto(){
         <>
         {Project.name ? (
         <div className={styles.project_details}>
-            <Conteiner customClass="column">
+            <Conteiner customClass="ConteinerGeral">
             
                 {message && <Message type={type} msg={message} /> }
-                <div className={styles.details_conteiner}>
-                    <h1>Projeto : {Project.name}</h1>
-                    <button className={styles.btn} onClick={toggleProjectForm}>
-                        {!showProjectForm ? 'Editar Projeto' : 'Fechar'}
-                        
-                    </button>
-                    {!showProjectForm ? (
-                            <div className={styles.project_info}> 
-                                <p>
-                                    <span>Categoria:</span>{Project.category.name}
-                                </p>
-                                <p>
-                                    <span>Total do Orçamento: R$ </span>{Project.budget}
-                                </p>
-                                <p>
-                                    <span>Total do Ultilizado: R$ </span>{Project.cost}
-                                </p>
-                            </div>
-                        ) : (
-                            <div className={styles.project_info}>
-                                <Form   handleSubmit={editPost} 
-                                        btnText="Concluir Edição" 
-                                        projectData={Project}/>
-                            </div>
-                        )}
-                </div>
-                <div className={styles.service_form_conteiner}>
-                    <h2>Adicione um Serviços:</h2>
-                    <button className={styles.btn} onClick={toggleServiceForm}>
-                        {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
-                    </button>
-                    <div className={styles.project_info}>
-                            {showServiceForm &&(
-                                    <ServiceForm handleSubmit={createService} btnText="Adicionar serviço" projectData={Project}/>
-                                ) 
-                            }
+                <div >
+                    <div className={styles.details_conteiner}>
+                        <h1>Projeto : {Project.name}</h1>
+                        <button className={styles.btn} onClick={toggleProjectForm}>
+                            {!showProjectForm ? 'Editar Projeto' : 'Fechar'}
+                            
+                        </button>
+                        {!showProjectForm ? (
+                                <div className={styles.project_info}> 
+                                    <p>
+                                        <span>Categoria:</span>{Project.category.name}
+                                    </p>
+                                    <p>
+                                        <span>Total do Orçamento: R$ </span>{Project.budget}
+                                    </p>
+                                    <p>
+                                        <span>Total do Ultilizado: R$ </span>{Project.cost}
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className={styles.project_info}>
+                                    <Form   handleSubmit={editPost} 
+                                            btnText="Concluir Edição" 
+                                            projectData={Project}/>
+                                </div>
+                            )}
+                    </div>
+
+                    <div className={styles.service_form_conteiner}>
+                        <h3>Adicione um Serviços:</h3>
+                        <button className={styles.btn} onClick={toggleServiceForm}>
+                            {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
+                        </button>
+                        <div className={styles.project_info}>
+                                {showServiceForm &&(
+                                        <ServiceForm handleSubmit={createService} btnText="Adicionar serviço" projectData={Project}/>
+                                    ) 
+                                }
+                        </div>
                     </div>
                 </div>
-                <h2>Serviços</h2>
-                <Conteiner customClass="start" >
+                
+                <Conteiner customClass="Servicos" >
+                    <h2>Serviços</h2>
                     {services.length > 0 &&                       
                         services.map((service) => (
                             <ServiceCard    id={service.id}
@@ -195,7 +199,8 @@ function Projeto(){
 
                     {services.length === 0 && <p>não ha serviços cadastrados</p>}
                 </Conteiner>
-        </Conteiner>
+
+            </Conteiner>
         </div>
         ): (
             <Loading/>

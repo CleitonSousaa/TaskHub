@@ -28,3 +28,33 @@
 .item a:hover{
     color: #ffbb33;
 }
+
+
+@media (max-width: 1280px){
+
+}
+@media (max-width: 900px){
+    .logo{
+        width: 70px;
+    }
+    .item{
+        margin-right: 2em;
+    }
+}
+
+@media (max-width: 450px){
+    .logo{
+        width: 50px;
+    }
+    .item{
+        margin-right: .5em;
+    }
+}
+@media (max-width: 360px){
+    .logo{
+        width: 30px;
+    }
+    .item{
+        margin-right: .5em;
+    }
+}
